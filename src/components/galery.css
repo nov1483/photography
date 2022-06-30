@@ -1,0 +1,11 @@
+.category img {
+    width: 300px;
+    height: 250px;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+}
