@@ -1,0 +1,31 @@
+.full h1 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.category_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    margin-bottom: 50px;
+}
+
+.category_item_container h1 {
+    margin-bottom: 70px;
+}
+
+.category_item {
+    max-width: 350px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+.category_item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit:cover;
+}

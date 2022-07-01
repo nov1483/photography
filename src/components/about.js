@@ -8,7 +8,7 @@ function About() {
         <section className="full about">
             <div className="container about_container">
                 <div className="about_img">
-                    <img src={aboutImg} alt='image'></img>
+                    <img src={aboutImg} alt='about'></img>
                 </div>
                 <div className="about_content">
                     <h1>Cześć, nazywam się Arkadiusz Smolira, jestem fotografem!</h1>

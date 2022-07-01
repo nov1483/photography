@@ -1,11 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../db/db";
 import "./galery.css"
 
 function Galery() {
     const [data, setData] = useState([]);
-    const [photos, setPhotos] = useState([]);
+    // const [photos, setPhotos] = useState([]);
 
     async function getData(){
         if (data.length === 0) {
@@ -38,13 +39,21 @@ function Galery() {
     return(
         <section className="full about">
             <div className="container galery_container">
-                <h1>Galery</h1>
+                <h1>Kategorii</h1>
                 <div className="category">
-                {data.map((d, index) => {
+                {data.map((d, id) => {
                     return(
-                        <div key={index} className="category_card">                          
-                                <img src={d.data.img} alt='img' crossOrigin="true"></img>
-                                <p >{d.data.title}</p>                          
+                        <div key={id} className="category_card" >                          
+                            {d.id === "rIGNtFNVGzz7kQM1vf90" ? <Link to='/galery/chelm'><img src={d.data.img} alt='img' crossOrigin="true"></img></Link> : ''}
+                            {d.id === "1ukBR8khOU7OU47I7Ulv" ? <Link to='/galery/products'><img src={d.data.img} alt='img' crossOrigin="true"></img></Link> : ''}
+                            {d.id === "ogINKkfeYgeGJr3mCIhO" ? <Link to='/galery/party'><img src={d.data.img} alt='img' crossOrigin="true"></img></Link> : ''}
+                            {d.id === "m6jWbhQpFzmueBMxceB8" ? <Link to='/galery/church'><img src={d.data.img} alt='img' crossOrigin="true"></img></Link> : ''}
+                            <div className="category_card_title">
+                              {d.id === "rIGNtFNVGzz7kQM1vf90" ? <Link to='/galery/chelm'>{d.data.title}</Link> : ''} 
+                              {d.id === "1ukBR8khOU7OU47I7Ulv" ? <Link to='/galery/products'>{d.data.title}</Link> : ''}
+                              {d.id === "ogINKkfeYgeGJr3mCIhO" ? <Link to='/galery/party'>{d.data.title}</Link> : ''}
+                              {d.id === "m6jWbhQpFzmueBMxceB8" ? <Link to='/galery/church'>{d.data.title}</Link> : ''}  
+                            </div>                         
                         </div>
                     )
                 })}

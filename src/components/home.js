@@ -26,16 +26,16 @@ function Home() {
                                 <div className="work_title">
                                     <h3>Ostatnie Pracy</h3>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Laoreet habitant facilisis sapien massa duis.<br/> Consequat, vitae elit pellentesque.</p>
+                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę z której<br/> słychać było charakterystyczne Ryki natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
                             </div>
                             <div className="work_img_container">
                                 <div className="work_img">
-                                    <h4>Zdjęcie</h4>
-                                    <img src={work} width='390px' height='400px' alt="work image"></img>
+                                    <h4>Wypad na Rykowisko</h4>
+                                    <img src={work} width='450px' height='400px' alt="work"></img>
                                 </div>
                                 <div className="img_content">
                                         <p>Arkadiusz Smolira</p>
-                                        <p>13 Czerwca, 2022</p>
+                                        <p>10 Maja, 2022</p>
                                     </div>
                             </div>
                         </div>
@@ -44,8 +44,8 @@ function Home() {
                         <div className="work_container">
                                 <div className="work_img_container">
                                     <div className="work_img">
-                                        <img src={work1} width='690px' height='400px' alt="work1 image"></img>
-                                        <h4>Zdjęcie 1</h4>
+                                        <img src={work1} width='690px' height='400px' alt="work1"></img>
+                                        <h4>Kasprowy Wierch</h4>
                                     </div>
                                     <div className="img_content">
                                         <p>Arkadiusz Smolira</p>
@@ -53,7 +53,7 @@ function Home() {
                                     </div>
                                 </div>
                             <div className="work_content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Laoreet habitant facilisis sapien massa duis.<br/> Consequat, vitae elit pellentesque.</p>
+                                <p>Widok z Kasprowego Wierchu tuż przed zachodem słońca.<br/> Na szczęście miałem ze sobą mini statyw i kilka minut przed<br/> odjazdem ostatniej kolejki udało mi się zrobić to zdjęcie.</p>
                             </div>
                         </div>
                     </div>

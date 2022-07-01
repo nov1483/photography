@@ -65,6 +65,8 @@
 
 .work_content:last-child {
     padding-left: 130px;
+    display: flex;
+    align-items: center;
 }
 
 .work_title{
