@@ -1,0 +1,113 @@
+@keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.925);
+        box-shadow: 0 0 0 10px rgba(255, 253, 253, 0.014);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgb(255, 255, 255);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+.contacts_bg {
+    background-image: url(../img/contactsBg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 210px;
+    -webkit-box-shadow: 0px -26px 38px 8px rgb(116, 118, 139);
+    -moz-box-shadow: 0px -26px 38px 8px rgba(66, 68, 90, 1);
+    box-shadow: 0px -26px 38px 8px rgba(66, 68, 90, 1);
+}
+
+.contacts_container {
+    color: #fff;
+}
+
+.contacts_container h1{
+    padding-top: 30px ;
+    padding-bottom: 120px;
+}
+
+.contacts_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts_text h3 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.contacts_text a {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.contacts_ico_gmail {
+    color: rgb(241, 35, 35);
+    animation: pulse 4s infinite;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+}
+
+.contacts_ico_gmail:hover {
+    color: rgb(241, 63, 63);
+    animation: none;
+}
+
+.ico_fb {
+    color: rgb(8, 67, 156);
+    transition: ease-in-out 0.5s;
+}
+
+.ico_fb:hover {
+    color: rgb(54, 90, 250);
+}
+
+.contacts_text p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contacts_text p {
+    font-weight: bold;
+}
+
+.contacts_text p,
+.contacts_text a {
+    display: flex;
+    align-items: center;
+}
+
+.contacts_text p svg {
+    font-size: 40px;
+}
+
+.contacts_info p svg {
+    font-size: 30px;
+}
+
+.contacts_info p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+}

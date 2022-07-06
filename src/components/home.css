@@ -46,7 +46,7 @@
 }
 
 .last_work {
-    margin-bottom: 80px;
+    padding-bottom: 120px;
 }
 
 .work {
@@ -194,14 +194,27 @@
 
 .services_img {
     margin-left: 80px;
-    width: 600px;
-    height: 400px;
+    width: 200px;
+    height: 300px;
+    position: relative;
 }
 
 .services_img img {
+    position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+.services_img img:nth-child(1){
+    right: -80%;
+    bottom: -15%;
+}
+
+.services_img img:nth-child(2){
+    z-index: 1;
+    right: -30%;
+    bottom: -30%;
 }
 
 .services_content a {

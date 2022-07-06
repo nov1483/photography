@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import aboutImg from "../img/promoImg.jpg"
+import aboutImg from "../img/about.jpg"
 import "./about.css"
 
 function About() {
+
     return(
         <section className="full about">
             <div className="container about_container">
@@ -23,7 +24,7 @@ function About() {
                     <p>Z racji, że fotografia nie jest moim źródłem utrzymania, a jedynie pasją i hobby, <br/>cena za usługi jest dostępna dla każdej kieszeni.<br/> Jakość zdjęć nie odbiega zaś
                         znacząco od profesjonalnych ujęć.
                     </p>
-                    <Link to="/galery">Portfolio</Link>
+                    <Link to="/galery" onClick={() => window.scrollTo(0,0)} >Portfolio</Link>
                 </div>
             </div>
         </section>

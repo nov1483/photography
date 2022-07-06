@@ -9,6 +9,7 @@
     grid-row-gap: 30px;
     grid-column-gap: 30px;
     margin-bottom: 50px;
+    
 }
 
 .category_item_container h1 {
@@ -19,8 +20,10 @@
     max-width: 350px;
     height: 250px;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     background-position: center;
+    box-shadow: 7px 0 20px 5px rgba(66, 68, 90, 1);
+    border-radius: 10px;
 }
 
 .category_item img {

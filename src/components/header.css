@@ -38,6 +38,8 @@
     color: #000;
     position: relative;
     transition: ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
 }
 
 .nav ul li a::before {
@@ -68,6 +70,65 @@
     height: 2px;
     bottom: -5px;
     left: 0;
-    border-radius: 50%;
     background-color: #FE5D26;
-  }
+}
+
+.drop_menu {
+    position: relative;
+}
+
+.sub_menu {
+    opacity: 0;
+    position: absolute;
+    transition: ease-in-out 0.5s;
+    width: 0;
+}
+
+
+.nav ul .drop_menu .sub_menu li {
+    opacity: 0;
+    border-bottom: 1px solid #fff;
+    display: none;
+}
+
+.nav ul .drop_menu:hover .sub_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -75%;
+    z-index: 1;
+    width: 200px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.815);
+    backdrop-filter: blur(2px);
+    /* box-shadow: 0 0 50px 10px #534a47 inset; */
+    border-radius: 5px;
+    
+}
+
+.nav ul .drop_menu:hover .sub_menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0 !important;
+    opacity: 1;
+    padding: 5px;
+    width: 100%;
+    transition: ease-in-out 0.5s;
+}
+.nav ul .drop_menu:hover .sub_menu a {
+    color: #fff;
+    display: block;
+}
+
+.sub_menu a:hover {
+    transform: scale(1.10);
+}
+
+.nav ul .drop_menu .sub_menu li a::before {
+    content: '';
+    display: none;
+}

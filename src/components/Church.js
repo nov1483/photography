@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
+import usePagination from "../pagination/pagination";
 import db from "../db/db";
 
 
 function Church() {
     const [data, setData] = useState([]);
+    const {
+      totalPage,
+      nextPage,
+      prevPage,
+      setPage,
+      firstContentIndex,
+      lastContentIndex,
+      page,
+  } = usePagination({
+  contentPerPage: 12,
+  count: data.length,
+})
 
 
     async function getData(){
@@ -38,7 +51,7 @@ function Church() {
             <h1>Śladami Architektury Cerkiewnej</h1>
             <div className="container category_item_container">  
                 <div className="category_items">
-                    {data.map((d, index) => {
+                    {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {
                         return(                            
                                 <div style={{backgroundImage:`url(${d.data.img})`}} key={index} className="category_item">
                                     {/* <img src={d.data.img} alt="chelm category img"></img> */}
@@ -46,6 +59,39 @@ function Church() {
                         )
                     })}
                 </div>
+                <div className="container pagintaion_container">
+                    <div className="page_pagination">
+                        <p className="text">
+                            {page}/{totalPage}
+                        </p>
+                        <button
+                            onClick={prevPage}
+                            
+                            className={`arr ${page === 1 ? 'active' : ''} `}
+                            disabled={page === 1}
+                        >
+                            &larr;
+                        </button>
+                        {[...Array(totalPage).keys()].map(el => (
+                            <button
+                                onClick={() => {setPage(el + 1);window.scrollTo(0,0)}}
+                                key={el.toString()}
+                                className={`page ${page === el + 1 ? 'active' : ''}`}
+                                disabled={page === el + 1}
+                            >
+                                {el + 1}
+                            </button>
+
+                        ))}
+                        <button
+                            onClick={nextPage}
+                            className={`arr ${page === 3 ? 'active' : ''}`}
+                            disabled={page === totalPage}
+                        >
+                            &rarr;
+                        </button>
+                    </div>
+            </div>
             </div>
         </section>
     )

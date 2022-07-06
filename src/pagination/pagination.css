@@ -1,0 +1,37 @@
+.text {
+    font-weight: bold;
+}
+
+.pagintaion_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.page_pagination {
+    text-align: center;
+}
+
+
+.page_pagination .active {
+    background-color: #FE5D26;
+    color: #000;
+    cursor:default;
+}
+
+.page_pagination button {
+    margin-right: 2px;
+    padding: 5px 10px;
+    border: 0;
+    color: #fff;
+    background-color: #1d1d1d;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.page_pagination button:hover{
+   background-color: #FE5D26;
+   color: #000;
+}

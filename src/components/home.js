@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import servicesImg from "../img/servicesImg.jpg"
-import promoImg from "../img/promoImg1.png"
-import work from "../img/work.jpg"
-import work1 from "../img/work1.jpg"
+import promoImg from "../img/promoImg1.png";
+import work from "../img/work.jpg";
+import work1 from "../img/work1.jpg";
+import home1 from "../img/homeimg1.jpg";
+import home2 from "../img/homeimg2.jpg";
+import home3 from "../img/homeimg3.jpg";
 import "./home.css"
 
 function Home() {
+
     return(
         <section className="full">
             <div className="container home_container">
@@ -16,7 +19,7 @@ function Home() {
                     </div>
                     <div className="promo_content">
                         <h2>Gotowy,<br/> abyś wyglądał radośnie <br/> dzięki fotografii.</h2>
-                        <Link to="/galery">Zobacz Portfolio</Link>
+                        <Link to="/galery" onClick={() => window.scrollTo(0,0)}>Zobacz Portfolio</Link>
                     </div>
                 </div>
                 <div className="last_work">
@@ -24,7 +27,7 @@ function Home() {
                         <div className="work_container">
                             <div className="work_content">
                                 <div className="work_title">
-                                    <h3>Ostatnie Pracy</h3>
+                                    <h3>Ostatnie Prace</h3>
                                 </div>
                                 <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę z której<br/> słychać było charakterystyczne Ryki natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
                             </div>
@@ -69,10 +72,12 @@ function Home() {
                                 <li>Fotografia Wnętrz, nieruchomości na sprzedaż itp.</li>
                             </ul>
                             <p>Skontaktuj się ze mną żeby dowiedzieć się więcej.</p>
-                            <Link to='/contact'>Kontakty</Link>
+                            <Link to='/contact' onClick={() => window.scrollTo(0,0)}>Kontakty</Link>
                         </div>
                         <div className="services_img">
-                            <img src={servicesImg} alt='img'></img>
+                            <img src={home1} alt='img'></img>
+                            <img src={home2} alt='img'></img>
+                            <img src={home3} alt='img'></img>
                         </div>
                     </div>
                 </div>
