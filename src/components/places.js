@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
+import Modal from "./modal";
 import db from "../db/db";
 import usePagination from "../pagination/pagination";
 
@@ -7,6 +8,8 @@ import usePagination from "../pagination/pagination";
 
 function Places() {
     const [data, setData] = useState([]);
+    const [clickedImg, setClickedImg] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(null);
     const {
         totalPage,
         nextPage,
@@ -16,9 +19,58 @@ function Places() {
         lastContentIndex,
         page,
     } = usePagination({
-    contentPerPage: 12,
+    contentPerPage: 15,
     count: data.length,
-})
+    })
+
+    const handleClick = (d, index) => {
+        setClickedImg(d.data.img);
+        setCurrentIndex(index);
+        console.log(index)
+    }
+   
+    const handleRotationRight = (d) => {
+        
+        const totalLength = data.length;
+        if(currentIndex + 1 >= totalLength) {
+            setCurrentIndex(0)
+            const newUrl = d.data[0].img;
+            setClickedImg(newUrl);  
+            return;
+        }
+       
+
+        const newIndex = currentIndex + 1;
+        const newUrl = data.filter((d) => {
+            return data.indexOf(d) === newIndex;
+            
+        });
+         if(newIndex === 0) {
+            prevPage()
+        }
+        const newItem = newUrl[0].data.img;
+        setClickedImg(newItem);
+        setCurrentIndex(newIndex);
+        console.log(newIndex)
+    }
+
+    const handleRotationLeft = (d) => {
+        const totalLength = data.length;
+        if(currentIndex === 0) {
+            setCurrentIndex(totalLength - 1)
+            const newUrl = d.data[totalLength - 1].img;
+            setClickedImg(newUrl);
+            return;
+        }
+        const newIndex = currentIndex - 1;
+        const newUrl = data.filter((d) => {
+            return data.indexOf(d) === newIndex;
+            
+        });
+        const newItem = newUrl[0].data.img;
+        setClickedImg(newItem);
+        setCurrentIndex(newIndex);
+    }
 
 
     async function getData(category){
@@ -52,14 +104,18 @@ function Places() {
             <h1>Miejsca Na Świecie</h1>
             <div className="container category_item_container">
                 <div className="category_items">
+                 
                     {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {
                         return(                           
-                            <div style={{backgroundImage:`url(${d.data.img})`}} key={index} className="category_item">
-                                {/* <img src={d.data.img} alt="chelm category img"></img> */}
+                            <div style={{backgroundImage:`url(${d.data.img})`}} key={index} onClick={() => handleClick(d, index)} className="category_item">
+                                    
                             </div>
                         )
                     })}
+                
                 </div>
+                
+                
                 <div className="container pagintaion_container">
                     <div className="page_pagination">
                         <p className="text">
@@ -86,14 +142,17 @@ function Places() {
                         ))}
                         <button
                             onClick={nextPage}
-                            className={`arr ${page === 5 ? 'active' : ''}`}
+                            className={`arr ${page === totalPage? 'active' : ''}`}
                             disabled={page === totalPage}
                         >
                             &rarr;
                         </button>
                     </div>
             </div>
-            </div>
+            </div> 
+             {clickedImg && (
+                    <Modal clickedImg={clickedImg} handleRotationRight={handleRotationRight} setClickedImg={setClickedImg} handleRotationLeft={handleRotationLeft}/>
+                )}
         </section>
     )
 }
