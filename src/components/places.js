@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import Modal from "./modal";
 import db from "../db/db";
@@ -6,9 +6,10 @@ import usePagination from "../pagination/pagination";
 
 
 
+
 function Places() {
     const [data, setData] = useState([]);
-    const [clickedImg, setClickedImg] = useState(null);
+    const [clickedImg, setClickedImg] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
     const {
         totalPage,
@@ -19,46 +20,41 @@ function Places() {
         lastContentIndex,
         page,
     } = usePagination({
-    contentPerPage: 15,
+    contentPerPage: 12,
     count: data.length,
     })
-
+   
+    
+   
     const handleClick = (d, index) => {
         setClickedImg(d.data.img);
         setCurrentIndex(index);
         console.log(index)
     }
    
-    const handleRotationRight = (d) => {
-        
+    const handleRotationRight = () => {
+      
         const totalLength = data.length;
         if(currentIndex + 1 >= totalLength) {
             setCurrentIndex(0)
-            const newUrl = d.data[0].img;
+            const newUrl = data[0].data.img;
             setClickedImg(newUrl);  
             return;
         }
-       
-
         const newIndex = currentIndex + 1;
-        const newUrl = data.filter((d) => {
-            return data.indexOf(d) === newIndex;
-            
+        const newUrl = data.filter((d) => {    
+            return data.indexOf(d) === newIndex;  
         });
-         if(newIndex === 0) {
-            prevPage()
-        }
         const newItem = newUrl[0].data.img;
         setClickedImg(newItem);
-        setCurrentIndex(newIndex);
-        console.log(newIndex)
+        setCurrentIndex(newIndex); 
     }
 
-    const handleRotationLeft = (d) => {
+    const handleRotationLeft = () => {
         const totalLength = data.length;
         if(currentIndex === 0) {
-            setCurrentIndex(totalLength - 1)
-            const newUrl = d.data[totalLength - 1].img;
+            setCurrentIndex(totalLength)
+            const newUrl = data[totalLength - 1].data.img;
             setClickedImg(newUrl);
             return;
         }
@@ -99,6 +95,8 @@ function Places() {
       
     getData("Places");
     
+  
+
     return(
         <section className="full party">
             <h1>Miejsca Na Świecie</h1>
@@ -107,14 +105,13 @@ function Places() {
                  
                     {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {
                         return(                           
-                            <div style={{backgroundImage:`url(${d.data.img})`}} key={index} onClick={() => handleClick(d, index)} className="category_item">
+                            <div style={{backgroundImage:`url(${d.data.img})`}} key={index} onClick={() => handleClick(d, index) } className="category_item">
                                     
                             </div>
                         )
                     })}
                 
                 </div>
-                
                 
                 <div className="container pagintaion_container">
                     <div className="page_pagination">
@@ -150,8 +147,9 @@ function Places() {
                     </div>
             </div>
             </div> 
+           
              {clickedImg && (
-                    <Modal clickedImg={clickedImg} handleRotationRight={handleRotationRight} setClickedImg={setClickedImg} handleRotationLeft={handleRotationLeft}/>
+                    <Modal clickedImg={clickedImg} handleRotationRight={handleRotationRight} setClickedImg={setClickedImg} handleRotationLeft={handleRotationLeft} />
                 )}
         </section>
     )

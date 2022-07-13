@@ -5,11 +5,7 @@ function usePagination({contentPerPage, count}){
     const pageCount = Math.ceil(count / contentPerPage);
     const lastContentIndex = page * contentPerPage;
     const firstContentIndex = lastContentIndex - contentPerPage;
-    const scrollToTop = (el) => {
-        el.scrollIntoView({
-            behavior : 'smooth', block : 'start'
-        })
-    }
+
 
     function changePage(direction){
         setPage((state) => {
@@ -39,8 +35,8 @@ function usePagination({contentPerPage, count}){
 
     return {
         totalPage: pageCount,
-        nextPage: () => {changePage(true); scrollToTop()},
-        prevPage: () => {changePage(false); scrollToTop()},
+        nextPage: () => {changePage(true); window.scrollTo(0,0)},
+        prevPage: () => {changePage(false); window.scrollTo(0,0)},
         setPage: setPageSalfe,
         firstContentIndex,
         lastContentIndex,

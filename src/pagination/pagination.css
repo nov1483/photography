@@ -15,7 +15,13 @@
 
 
 .page_pagination .active {
-    background-color: #FE5D26;
+    background-color: #fe5c26;
+    color: #000;
+    cursor:default;
+}
+
+.page_pagination .active:hover {
+    background-color: #fe5c26;
     color: #000;
     cursor:default;
 }
@@ -25,13 +31,13 @@
     padding: 5px 10px;
     border: 0;
     color: #fff;
-    background-color: #1d1d1d;
+    background-color: #1d1d1d85;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50%;
     font-weight: bold;
+    transition: ease-in-out 0.5s;
 }
 
 .page_pagination button:hover{
-   background-color: #FE5D26;
-   color: #000;
+   background-color: #1d1d1d;
 }
