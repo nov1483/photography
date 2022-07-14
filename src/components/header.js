@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowDown } from 'react-icons/io';
+import Popup from "./popup";
+import PricePopup from "./pricePopup";
 import logo from "../img/mini150.jpg"
 import "./header.css"
 
 function Header () {
     const location = useLocation();
-
+    const [modalActive, setModalActive] = useState(false);
+    const [priceActive, setPriceActive] = useState(false)
     return(
             <header className="full header">
                 <div className="container container_header">
@@ -33,9 +36,13 @@ function Header () {
                                         
                                     </ul>
                                 </li>
+                                <li><button className='rules' onClick={() => setModalActive(true)}>Regulamin</button></li>
+                                <li><button className='rules' onClick={() => setPriceActive(true)}>Cennik</button></li>
                                 <li><Link to='/contact' className={location.pathname === '/contact' ? "active" : "disabled"}>Kontakt</Link></li>
                             </ul>
                         </nav>
+                        <Popup active={modalActive} setActive={setModalActive} />
+                        <PricePopup active={priceActive} setActive={setPriceActive} />
                     </div>
                 </div>
             </header>

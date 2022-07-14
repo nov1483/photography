@@ -18,8 +18,9 @@ function Footer () {
                         <li><Link to="/galery">Portfolio</Link></li>
                         <li><Link to="/contacts">Kontakt</Link></li>
                     </ul>
-                </div>
+                </div> 
             </div>
+           
         </footer>
     )
 }

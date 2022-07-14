@@ -1,0 +1,93 @@
+.price.modal {
+    transform: scale(0);
+    transition: ease-in-out 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    color: #000;
+}
+
+.modal.active {
+    transform: scale(1);
+    transition: ease-in-out 0.5s;
+    background-color: rgba(0, 0, 0, 0.692);
+}
+
+.price.modal_content {
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    width: 50%;
+    height: 50%;
+}
+
+.modal_content .close_modal {
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    transition: ease-in-out 0.5s;
+}
+
+.modal_content .close_modal:hover {
+    color: red;
+    transform: scale(1.20);
+}
+
+.modal_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_btns .close_btn {
+    padding: 12px 5px;
+    background-color: #1d1d11;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: ease-in-out 0.5s;
+}
+
+.modal_btns .close_btn:hover {
+    background-color: #FE5D26;
+}
+
+.accordion_item {
+    background-color: #000000;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+
+.accordion_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion_price {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+    
+}
+
+.accordion_price_show {
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+}

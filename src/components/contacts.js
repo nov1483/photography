@@ -1,6 +1,5 @@
 import React from "react";
 import { ImMail4 } from 'react-icons/im';
-import { FaPhoneSquareAlt } from 'react-icons/fa';
 import { FaFacebookSquare } from 'react-icons/fa';
 import "./contacts.css"
 
@@ -14,7 +13,6 @@ function Contacts() {
                         <div className="contacts_info">
                             <p>Chełm, Lubelskie, 22-100</p>
                             <p>Polska</p>
-                            <p><FaPhoneSquareAlt/> : +48 794 157 559</p>
                         </div>
 
                         <div className="contacts_text">

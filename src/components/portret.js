@@ -98,7 +98,7 @@ function Portret() {
     
   useEffect(() => {
         setLoaded(true);
-    })
+    }, [])
    if(!loaded) {
     return (
         

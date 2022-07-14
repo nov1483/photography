@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import usePagination from "../pagination/pagination";
+import Modal from "./modal";
 import db from "../db/db";
+import usePagination from "../pagination/pagination";
+import Spinner from "./spinner";
 import "../pagination/pagination.css"
+import "./spinner.css"
+
 
 
 function Products() {
+    const [loaded, setLoaded] = useState(false);
     const [data, setData] = useState([]);
+    const [clickedImg, setClickedImg] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(null);
     const {
         totalPage,
         nextPage,
@@ -18,25 +25,66 @@ function Products() {
     } = usePagination({
     contentPerPage: 12,
     count: data.length,
-})
+    })
+   
+    
+    const handleClick = (d, index) => {
+        setClickedImg(d.data.img);
+        setCurrentIndex(index);
+    }
+   
+    const handleRotationRight = () => {
+      
+        const totalLength = data.length;
+        if(currentIndex + 1 >= totalLength) {
+            setCurrentIndex(0)
+            const newUrl = data[0].data.img;
+            setClickedImg(newUrl);  
+            return;
+        }
+        const newIndex = currentIndex + 1;
+        const newUrl = data.filter((d) => {    
+            return data.indexOf(d) === newIndex;  
+        });
+        const newItem = newUrl[0].data.img;
+        setClickedImg(newItem);
+        setCurrentIndex(newIndex); 
+    }
+
+    const handleRotationLeft = () => {
+        const totalLength = data.length;
+        if(currentIndex === 0) {
+            setCurrentIndex(totalLength)
+            const newUrl = data[totalLength - 1].data.img;
+            setClickedImg(newUrl);
+            return;
+        }
+        const newIndex = currentIndex - 1;
+        const newUrl = data.filter((d) => {
+            return data.indexOf(d) === newIndex;
+            
+        });
+        const newItem = newUrl[0].data.img;
+        setClickedImg(newItem);
+        setCurrentIndex(newIndex);
+    }
 
 
-    async function getData(){
+    async function getData(category){
         if (data.length === 0) {
-          if (localStorage.getItem('products')) {
-              setData([...JSON.parse(localStorage.getItem('products'))]) 
+          if (localStorage.getItem(`${category}`)) {
+              setData([...JSON.parse(localStorage.getItem(`${category}`))]) 
           }else{
-            const doc = await getDocs(collection(db, "Products"))
+            const doc = await getDocs(collection(db, `${category}`))
             let dataDb = [];
             doc.forEach(d => {
                 dataDb.push({
                   id : d.id,
                   data : d.data(),
                 });
-                console.log(dataDb)
               });
             if(data.length === 0){
-              localStorage.setItem('products', JSON.stringify(dataDb));
+              localStorage.setItem(`${category}`, JSON.stringify(dataDb));
               setData(dataDb);
             };
         
@@ -45,21 +93,34 @@ function Products() {
         
       }
       
-    getData();
+    getData("Products");
     
+  useEffect(() => {
+        setLoaded(true);
+    }, [])
+   if(!loaded) {
+    return (
+        
+        <Spinner/>
+    )
+   }
+
     return(
-        <section className="full chelm">
-            <h1>Fotografia Produktowa</h1>
+        <section className="full party">
+            <h1>Fotografia Produktowa </h1>
             <div className="container category_item_container">
                 <div className="category_items">
+                 
                     {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {
-                        return(                       
-                            <div style={{backgroundImage:`url(${d.data.img})`}} key={index} className="category_item">
-                                {/* <img src={d.data.img} alt="chelm category img"></img> */}
-                            </div>                      
+                        return(                           
+                            <div style={{backgroundImage:`url(${d.data.img})`}} key={index} onClick={() => handleClick(d, index) } className="category_item">
+                                    
+                            </div>
                         )
                     })}
-                </div> 
+                
+                </div>
+                {loaded &&(
                 <div className="container pagintaion_container">
                     <div className="page_pagination">
                         <p className="text">
@@ -86,15 +147,19 @@ function Products() {
                         ))}
                         <button
                             onClick={nextPage}
-                            className={`arr ${page === 1 ? 'active' : ''}`}
+                            className={`arr ${page === totalPage? 'active' : ''}`}
                             disabled={page === totalPage}
                         >
                             &rarr;
                         </button>
                     </div>
-            </div>
-            </div>
-        </section> 
+            </div>)}
+            </div> 
+           
+             {clickedImg && (
+                    <Modal clickedImg={clickedImg} handleRotationRight={handleRotationRight} setClickedImg={setClickedImg} handleRotationLeft={handleRotationLeft} />
+                )}
+        </section>
     )
 }
 

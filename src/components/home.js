@@ -18,7 +18,7 @@ function Home() {
                         <img src={promoImg} width='270px' height='400px' alt='Oops'></img>
                     </div>
                     <div className="promo_content">
-                        <h2>Gotowy,<br/> abyś wyglądał radośnie <br/> dzięki fotografii.</h2>
+                        <div className="word">Gotowy, abyś wyglądał</div> <div className="word">radośnie</div> <div className="word">dzięki fotografii.</div>
                         <Link to="/galery" onClick={() => window.scrollTo(0,0)}>Zobacz Portfolio</Link>
                     </div>
                 </div>
