@@ -107,8 +107,9 @@ function Products() {
 
     return(
         <section className="full party">
-            <h1>Fotografia Produktowa </h1>
+            
             <div className="container category_item_container">
+                <h1>Fotografia Produktowa </h1>
                 <div className="category_items">
                  
                     {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {

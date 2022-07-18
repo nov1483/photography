@@ -13,10 +13,10 @@ function Footer () {
                 <div className="footer_menu">
                     <h3>Menu</h3>
                     <ul>
-                        <li><Link to="/">Strona główna</Link></li>
-                        <li><Link to="/about">O Mnie</Link></li>
-                        <li><Link to="/galery">Portfolio</Link></li>
-                        <li><Link to="/contacts">Kontakt</Link></li>
+                        <li><Link to="/" onClick={() => window.scrollTo(0,0)}>Strona główna</Link></li>
+                        <li><Link to="/about" onClick={() => window.scrollTo(0,0)}>O Mnie</Link></li>
+                        <li><Link to="/galery" onClick={() => window.scrollTo(0,0)}>Portfolio</Link></li>
+                        <li><Link to="/contact" onClick={() => window.scrollTo(0,0)}>Kontakt</Link></li>
                     </ul>
                 </div> 
             </div>

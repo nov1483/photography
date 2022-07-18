@@ -9,14 +9,15 @@ import Chelm from "./components/chelm.js";
 import Products from "./components/products.js";
 import Party from "./components/party.js";
 import Church from "./components/Church.js";
-import './App.css';
-import './components/category.css'
 import Nature from "./components/nature.js";
 import Airplane from "./components/airplane.js";
 import Kids from "./components/kids.js";
 import People from "./components/people.js";
 import Places from "./components/places.js";
 import Portret from "./components/portret.js";
+import './App.css';
+import './components/category.css';
+import './media.css'
 
 
 

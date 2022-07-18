@@ -18,7 +18,7 @@ function Home() {
                         <img src={promoImg} width='270px' height='400px' alt='Oops'></img>
                     </div>
                     <div className="promo_content">
-                        <div className="word">Gotowy, abyś wyglądał</div> <div className="word">radośnie</div> <div className="word">dzięki fotografii.</div>
+                        <div className="word">"Które z moich zdjęć jest moim ulubionym?<br/>To, które zrobię jutro"<br/>-Imogen Cunningham.</div>
                         <Link to="/galery" onClick={() => window.scrollTo(0,0)}>Zobacz Portfolio</Link>
                     </div>
                 </div>
@@ -32,9 +32,9 @@ function Home() {
                                 <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę z której<br/> słychać było charakterystyczne Ryki natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
                             </div>
                             <div className="work_img_container">
-                                <div className="work_img">
+                                <div className="work_img deer">
                                     <h4>Wypad na Rykowisko</h4>
-                                    <img src={work} width='450px' height='400px' alt="work"></img>
+                                    <img src={work} alt="work"></img>
                                 </div>
                                 <div className="img_content">
                                         <p>Arkadiusz Smolira</p>
@@ -46,8 +46,8 @@ function Home() {
                     <div className="work">
                         <div className="work_container">
                                 <div className="work_img_container">
-                                    <div className="work_img">
-                                        <img src={work1} width='690px' height='400px' alt="work1"></img>
+                                    <div className="work_img hill">
+                                        <img src={work1} alt="work1"></img>
                                         <h4>Kasprowy Wierch</h4>
                                     </div>
                                     <div className="img_content">

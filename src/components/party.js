@@ -107,8 +107,9 @@ function Party() {
 
     return(
         <section className="full party">
-            <h1>Uroczystości i Imprezy </h1>
+            
             <div className="container category_item_container">
+                <h1>Uroczystości i Imprezy </h1>
                 <div className="category_items">
                  
                     {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {

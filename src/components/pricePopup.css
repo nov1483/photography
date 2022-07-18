@@ -25,7 +25,10 @@
     padding: 20px;
     background-color: #fff;
     width: 50%;
-    height: 50%;
+}
+
+.price.modal_content h1{
+    margin-bottom: 10px;
 }
 
 .modal_content .close_modal {

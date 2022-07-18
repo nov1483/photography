@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .logo {
@@ -142,4 +143,211 @@
 .nav ul .drop_menu .sub_menu li a::before {
     content: '';
     display: none;
+}
+
+.burger {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+.burger .home_link {
+  margin-right: 15px;
+  font-size: 25px;
+  
+}
+
+.burger .home_link a {
+  color: #1d1d1d;
+  transition: ease-in-out 0.5s;
+}
+
+.burger .home_link a:hover {
+  color: #FE5D26;
+  
+}
+  
+  .burger label {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    width: 30px;
+    height: 20px;
+    z-index: 4;
+  }
+  
+  input.burger__check {
+    display: none;
+  }
+  
+  .burger label span,
+  .burger label span::before,
+  .burger label span::after {
+    position: absolute;
+    top: 5px;
+    display: block;
+    transition: all 0.5s ease;
+    width: 30px;
+    height: 5px;
+    background-color: #FE5D26;
+  }
+  
+  .burger label span::before {
+    content: "";
+    clear: both;
+    top: 7px;
+  }
+  
+  .burger label span:after {
+    content: "";
+    clear: both;
+    top: -7px;
+  }
+  
+  input.burger__check:checked ~ label > span {
+    transform: rotate(140deg);
+    width: 4px;
+    height: 20px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 15px;
+    right: 40px;
+  }
+  
+  input.burger__check:checked ~ label > span::after {
+    width: 4px;
+    height: 20px;
+    top: 0px;
+    right: 0px;
+    transform: rotate(85deg);
+    background-color: #ffffff;
+  }
+  
+  input.burger__check:checked ~ label > span:hover,
+  input.burger__check:checked ~ label > span:hover::after {
+    background-color: #f33848;
+  }
+  
+  input.burger__check:checked ~ label > span::before {
+    display: none;
+  }
+  
+  .burger-nav {
+    height: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(27, 27, 25, 0.7);
+    right: -100%;
+    top: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all 1000ms cubic-bezier(0.28, -0.315, 0.685, 1.39);
+    box-shadow: 0 0 100px 1px #838282 inset;
+    opacity: 0;
+    /* width: 99%;*/
+    height: 100%;
+  }
+  
+  input.burger__check:checked ~ .burger-nav {
+    backdrop-filter: blur(2px);
+    right: 0;
+    transition-duration: 1.25s;
+    opacity: 1;
+  }
+  
+  .burger-nav .burger_menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding: 50px;
+    transition-duration: .25s;
+  }
+  
+  .burger-nav li {
+    margin-right: 0;
+  }
+  
+  .burger-nav li a{
+    margin-bottom: 15px;
+    border-radius: 15px;
+    display: block;
+    position: relative;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: ease-in-out 0.5s;
+  }
+
+.burger_accordion_menu {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  .burger-nav li .rules {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 16px;
+  } 
+  
+.burger_menu li .active {
+  transform: scale(1.30);
+  color: #FE5D26;
+}
+
+.burger_accordion_menu.disabled {
+  color: #fff;
+}
+
+.burger_accordion_menu.active {
+  transform: scale(1);
+  color: #FE5D26;
+}
+
+.burger_sub_menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+.burger_sub_menu.sub_menu_disabled {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+.burger_sub_menu.sub_menu_active {
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+    
+}
+
+.burger-nav .burger_links a {
+  font-size: 30px;
+  animation: none;
+}
+
+.burger-nav .burger_links a:first-child {
+  margin-right: 20px;
+  color: rgb(16, 120, 255);
+}
+
+.burger-nav .burger_links a:last-child {
+  color: #ffffff;
 }

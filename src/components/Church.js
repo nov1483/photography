@@ -107,8 +107,9 @@ function Church() {
 
     return(
         <section className="full party">
-            <h1>Śladami Architektury Cerkiewnej </h1>
+            
             <div className="container category_item_container">
+                <h1>Śladami Architektury Cerkiewnej </h1>
                 <div className="category_items">
                  
                     {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {
