@@ -3,6 +3,10 @@
     margin-bottom: 70px;
 }
 
+.airplane h1 {
+    margin-bottom: 70px;
+}
+
 .category_items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -14,9 +18,6 @@
     justify-items: center;
 }
 
-.full h1 {
-    margin-bottom: 70px;
-}
 
 .category_item {
     display: block;
@@ -29,10 +30,6 @@
     border-radius: 10px;
     transition: ease-in-out 0.5s;
     cursor: pointer;
-}
-
-.category_item:hover {
-    transform: scale(1.05);
 }
 
 .overlay{

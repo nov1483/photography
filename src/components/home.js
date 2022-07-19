@@ -29,7 +29,7 @@ function Home() {
                                 <div className="work_title">
                                     <h3>Ostatnie Prace</h3>
                                 </div>
-                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę z której<br/> słychać było charakterystyczne Ryki natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
+                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę, z której<br/> słychać było charakterystyczne Ryki natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
                             </div>
                             <div className="work_img_container">
                                 <div className="work_img deer">
@@ -38,7 +38,7 @@ function Home() {
                                 </div>
                                 <div className="img_content">
                                         <p>Arkadiusz Smolira</p>
-                                        <p>10 Maja, 2022</p>
+                                        <p>25 Września, 2021</p>
                                     </div>
                             </div>
                         </div>

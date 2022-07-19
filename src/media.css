@@ -7,6 +7,19 @@
     .services_img {
         margin-left: 0;
     }
+    .about_wrapper{
+        flex-direction: column;
+        align-items: center;
+    } 
+    .about_img {
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about_content{
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -15,16 +28,6 @@
         height: 220px;
         margin-bottom: 30px;
     }
-
-    .about_wrapper{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about_img {
-        margin-bottom: 20px;
-    }
-
 }
 
 @media (max-width: 1100px) {
@@ -130,6 +133,10 @@
         padding: 0 20px;
     }
 
+    .last_work{
+        padding-bottom: 50px;
+    }
+
     .work_img_container:last-child {
         display: flex;
         flex-direction: column;
@@ -144,19 +151,220 @@
         flex-direction: column;
     }
 
+    .work_content:last-child {
+        justify-content: flex-end;
+    }
+
     .img_content{
         justify-content: flex-start;
     }
 
     .img_content p:not(:last-child) {
-        padding-right: 50px;
+        margin-right: 5px;
+    }
+
+    .services_content ul li{
+        font-size: 15px;
     }
 
 }
 
 @media (max-width: 750px) {
+    
     .promo_img {
         width: 140px;
         height: 210px;
     }
+
+    .promo_block{
+        justify-content: space-between;
+    }
+
+    .promo_content{
+        align-items: flex-end;
+    }
+
+    .promo_content .word{
+        margin-right: 0;
+    }
+
+    .price.modal_content h1{
+        font-size: 25px;
+    }
+
+    .accordion_title{
+        font-size: 15px;
+    }
+
+    .accordion_item{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 640px) {
+    .promo_content .word {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .promo_content a{
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 580px){
+    .work_img.hill {
+        width: 390px;
+        height: 240px;
+    }
+
+    .about_img{
+        width: 330px;
+        height: 230px;
+
+    }
+
+    .rules.modal_content h1{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 530px) {
+    .promo_block{
+        padding: 50px 10px 10px 10px;
+        justify-content: flex-end;
+    }
+    .promo_img{
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        width: 100px;
+        height: 150px;
+    }
+
+    .contacts_bg {
+        padding-bottom: 70px;
+    }
+
+    .contacts_container h1{
+        padding-bottom: 30px;
+    }
+
+    .contacts_text p:last-child {
+        margin-bottom: 30px;
+    }
+
+    .accordion_title{
+        font-size: 10px;
+    }
+
+    .modal_btns .close_btn{
+        padding: 8px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 500px){
+    .work_img h4:first-child {
+        left: -20px;
+    }
+
+    .work_img h4:last-child {
+        right: 0;
+    }
+}
+
+@media (max-width: 460px){
+    .promo_content .word {
+        font-size: 15px;
+        text-align: center;
+        width: auto;
+    }
+    .contacts_info{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px){
+    .promo_img{
+        width: 80px;
+        height: 120px;
+    }
+
+    .promo_block{
+        padding: 20px 10px 20px 10px;
+    }
+
+    .promo_content .word{
+        margin-bottom: 40px;
+    }
+
+    .work_img.deer{
+        width: 250px;
+        height: 200px;
+    }
+
+    .work_img.hill{
+        width: 290px;
+        height: 190px;
+    }
+
+    .services_content{
+        margin-bottom: 30px;
+    }
+
+    .services_img{
+        left: -60px;
+
+    }
+
+    .services_container h2::before{
+        width: 250px;
+    }
+
+   
+}
+
+@media (max-width: 410px) {
+     .services_content ul li::before{
+        left: 250px;
+    } 
+    .category{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .category_items{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .category_item{
+        width: 300px;
+    }
+
+    .rules.modal_content h1{
+        font-size: 15px;
+    }
+
+    .rules.modal_content ul li{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 355px){
+    .work_title h3::before {
+        width: 150px;
+        right: -170px;
+    }
+
+    .about_img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .arrow button{
+        z-index: 10;
+    }
+
+   
 }

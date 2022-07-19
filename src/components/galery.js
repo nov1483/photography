@@ -44,27 +44,27 @@ function Galery() {
                 {data.map((d, id) => {
                     return(
                         <div key={id} className="category_card" >                          
-                            {d.id === "rIGNtFNVGzz7kQM1vf90" ? <Link to='/galery/chelm'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "1ukBR8khOU7OU47I7Ulv" ? <Link to='/galery/products'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "ogINKkfeYgeGJr3mCIhO" ? <Link to='/galery/party'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "m6jWbhQpFzmueBMxceB8" ? <Link to='/galery/church'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "iSegsQWmZMMQkBK2pCYH" ? <Link to='/galery/nature'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "yY8bRrnBOcDa7ZzPXCLC" ? <Link to='/galery/airplane'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "lZudqchOuA1fxN2UFUMm" ? <Link to='/galery/kids'><img src={d.data.img} alt='img' ></img></Link> : ''}
-                            {d.id === "2RYKz3EUMuf8tiVmoFW3" ? <Link to='/galery/people'><img src={d.data.img} alt='img' ></img></Link> : ''}
-                            {d.id === "4GgzgLQPMJbfQar8xHi3" ? <Link to='/galery/places'><img src={d.data.img} alt='img'></img></Link> : ''}
-                            {d.id === "WTNTM65ftLpKFuu24YKI" ? <Link to='/galery/portret'><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "rIGNtFNVGzz7kQM1vf90" ? <Link to='/galery/chelm' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "1ukBR8khOU7OU47I7Ulv" ? <Link to='/galery/products' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "ogINKkfeYgeGJr3mCIhO" ? <Link to='/galery/party' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "m6jWbhQpFzmueBMxceB8" ? <Link to='/galery/church' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "iSegsQWmZMMQkBK2pCYH" ? <Link to='/galery/nature' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "yY8bRrnBOcDa7ZzPXCLC" ? <Link to='/galery/airplane' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "lZudqchOuA1fxN2UFUMm" ? <Link to='/galery/kids' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img' ></img></Link> : ''}
+                            {d.id === "2RYKz3EUMuf8tiVmoFW3" ? <Link to='/galery/people' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img' ></img></Link> : ''}
+                            {d.id === "4GgzgLQPMJbfQar8xHi3" ? <Link to='/galery/places' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
+                            {d.id === "WTNTM65ftLpKFuu24YKI" ? <Link to='/galery/portret' onClick={() => window.scrollTo(0,0)}><img src={d.data.img} alt='img'></img></Link> : ''}
                             <div className="category_card_title">
-                              {d.id === "rIGNtFNVGzz7kQM1vf90" ? <Link to='/galery/chelm'>{d.data.title}</Link> : ''} 
-                              {d.id === "1ukBR8khOU7OU47I7Ulv" ? <Link to='/galery/products'>{d.data.title}</Link> : ''}
-                              {d.id === "ogINKkfeYgeGJr3mCIhO" ? <Link to='/galery/party'>{d.data.title}</Link> : ''}
-                              {d.id === "m6jWbhQpFzmueBMxceB8" ? <Link to='/galery/church'>{d.data.title}</Link> : ''} 
-                              {d.id === "iSegsQWmZMMQkBK2pCYH" ? <Link to='/galery/nature'>{d.data.title}</Link> : ''}
-                              {d.id === "yY8bRrnBOcDa7ZzPXCLC" ? <Link to='/galery/airplane'>{d.data.title}</Link> : ''}
-                              {d.id === "lZudqchOuA1fxN2UFUMm" ? <Link to='/galery/kids'>{d.data.title}</Link> : ''}
-                              {d.id === "2RYKz3EUMuf8tiVmoFW3" ? <Link to='/galery/people'>{d.data.title}</Link> : ''}
-                              {d.id === "4GgzgLQPMJbfQar8xHi3" ? <Link to='/galery/places'>{d.data.title}</Link> : ''}
-                              {d.id === "WTNTM65ftLpKFuu24YKI" ? <Link to='/galery/portret'>{d.data.title}</Link> : ''}  
+                              {d.id === "rIGNtFNVGzz7kQM1vf90" ? <Link to='/galery/chelm' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''} 
+                              {d.id === "1ukBR8khOU7OU47I7Ulv" ? <Link to='/galery/products' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "ogINKkfeYgeGJr3mCIhO" ? <Link to='/galery/party' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "m6jWbhQpFzmueBMxceB8" ? <Link to='/galery/church' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''} 
+                              {d.id === "iSegsQWmZMMQkBK2pCYH" ? <Link to='/galery/nature' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "yY8bRrnBOcDa7ZzPXCLC" ? <Link to='/galery/airplane' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "lZudqchOuA1fxN2UFUMm" ? <Link to='/galery/kids' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "2RYKz3EUMuf8tiVmoFW3" ? <Link to='/galery/people' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "4GgzgLQPMJbfQar8xHi3" ? <Link to='/galery/places' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}
+                              {d.id === "WTNTM65ftLpKFuu24YKI" ? <Link to='/galery/portret' onClick={() => window.scrollTo(0,0)}>{d.data.title}</Link> : ''}  
                             </div>                         
                         </div>
                     )

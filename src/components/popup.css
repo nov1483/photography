@@ -29,6 +29,7 @@
     overflow-y: scroll;
 }
 
+
 .modal_content .close_modal {
     position: fixed;
     right: 50px;

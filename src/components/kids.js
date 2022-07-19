@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import Modal from "./modal";
 import db from "../db/db";
-import usePagination from "../pagination/pagination";
 import Spinner from "./spinner";
-import "../pagination/pagination.css"
 import "./spinner.css"
 
 
@@ -14,20 +12,7 @@ function Kids() {
     const [data, setData] = useState([]);
     const [clickedImg, setClickedImg] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
-    const {
-        totalPage,
-        nextPage,
-        prevPage,
-        setPage,
-        firstContentIndex,
-        lastContentIndex,
-        page,
-    } = usePagination({
-    contentPerPage: 12,
-    count: data.length,
-    })
-   
-    
+
     const handleClick = (d, index) => {
         setClickedImg(d.data.img);
         setCurrentIndex(index);
@@ -106,13 +91,13 @@ function Kids() {
    }
 
     return(
-        <section className="full party">
+        <section className="full kids">
             
             <div className="container category_item_container">
                 <h1>Sesje Dziecięce </h1>
                 <div className="category_items">
                  
-                    {data.slice(firstContentIndex, lastContentIndex).map((d, index) => {
+                    {data.map((d, index) => {
                         return(                           
                             <div style={{backgroundImage:`url(${d.data.img})`}} key={index} onClick={() => handleClick(d, index) } className="category_item">
                                     
@@ -121,40 +106,6 @@ function Kids() {
                     })}
                 
                 </div>
-                {loaded &&(
-                <div className="container pagintaion_container">
-                    <div className="page_pagination">
-                        <p className="text">
-                            {page}/{totalPage}
-                        </p>
-                        <button
-                            onClick={prevPage}
-                            
-                            className={`arr ${page === 1 ? 'active' : ''} `}
-                            disabled={page === 1}
-                        >
-                            &larr;
-                        </button>
-                        {[...Array(totalPage).keys()].map(el => (
-                            <button
-                                onClick={() => {setPage(el + 1);window.scrollTo(0,0)}}
-                                key={el.toString()}
-                                className={`page ${page === el + 1 ? 'active' : ''}`}
-                                disabled={page === el + 1}
-                            >
-                                {el + 1}
-                            </button>
-
-                        ))}
-                        <button
-                            onClick={nextPage}
-                            className={`arr ${page === totalPage? 'active' : ''}`}
-                            disabled={page === totalPage}
-                        >
-                            &rarr;
-                        </button>
-                    </div>
-            </div>)}
             </div> 
            
              {clickedImg && (

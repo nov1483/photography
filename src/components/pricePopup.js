@@ -20,7 +20,7 @@ const PricePopup = ({active, setActive}) => {
     },
 
     {
-        item : "Chrzest od ",
+        item : "Chrzest",
         price:  'od 220 zł'
     },
 

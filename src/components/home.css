@@ -1,17 +1,12 @@
-@keyframes switch {
-    0%,
-    5%,
+@keyframes animate {
+    0% {
+      background-position: 0%;
+    }
     100% {
-        filter: blur(0px);
-        opacity: 1;
+      background-position: 100%;
     }
+  }
 
-    50%,
-    80% {
-        filter: blur(180px);
-        opacity: 0;
-    }
-}
 
 .home_container {
     margin: 0 auto;
@@ -19,10 +14,11 @@
 }
 
 .promo_block {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #1D1D1D;
     color: #fff;
     margin-bottom: 80px;
@@ -47,24 +43,11 @@
 .promo_content .word {
     min-width: 100%;
     margin: auto;
-    /* animation: switch 6s infinite ease-in-out; */
     font-weight: bold;
     font-size: 28px;
     margin-bottom: 40px;
     margin-right: 25px;
 }
-
-/* .promo_content .word:nth-child(1) {
-    animation-delay: -7s;
-}
-
-.promo_content .word:nth-child(2) {
-    animation-delay: -6s;
-}
-
-.promo_content .word:nth-child(3) {
-    animation-delay: -5s;
-} */
 
 .promo_content h2 {
     font-size: 40px;
@@ -74,17 +57,32 @@
 
 .promo_content a{
     padding: 10px 30px;
-    background-color: #fff;
+    background: linear-gradient(50deg, #FE5D26,rgb(100, 84, 84), #f89e80, #f86e40, rgb(92, 89, 89), #FE5D26);
+    
     border-radius: 5px;
-    color: #1D1D1D;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     transition: ease-in-out 0.5s;
+    background-size: 300% 100%;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    animation: animate 8s infinite;
+    background-position: 0 0;
 }
 
 .promo_content a:hover {
-    color: #fff;
+    box-shadow: 0 4px 15px 0 rgba(252, 85, 8, 0.75);
+    color: #000;
     background-color: #FE5D26;
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    animation: none;
 }
 
 .last_work {
@@ -245,7 +243,7 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    background-color: #FE5D26;
+    background: linear-gradient(0deg, rgba(0,0,0,0.79) 0%, rgba(255,111,0,1) 100%);
     box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     left: -20px;

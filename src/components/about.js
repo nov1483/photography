@@ -15,7 +15,7 @@ function About() {
                     </div>
                     <div className="about_content">
                         <p>Fotografią na poważnie interesuje się kilkanaście lat. <br/>Jestem założycielem Chełmskiego Klubu Fotografii Przyrodniczej, 
-                            członkiem<br/> Związku Polskich Fotografów Przyrody.
+                            <br/>członkiem Związku Polskich Fotografów Przyrody.
                         </p>
                         <p>Posiadam wykształcenie kierunkowe - technik fotografii i multimediów,<br/> ukończyłem kurs fotografowania podczas celebracji liturgicznych.</p>
                         <p>Otrzymasz zdjęcia z pełnoklatkowego aparatu nowej generacji, obrobione<br/>  cyfrowo, na ozdobnej płycie, dodatkowo galeria internetowa oraz możliwość wywołania<br/>  odbitek. 
