@@ -4,6 +4,7 @@ import Modal from "./modal";
 import db from "../db/db";
 import Spinner from "./spinner";
 import "./spinner.css"
+import BtnTop from "./toTop";
 
 
 
@@ -92,7 +93,7 @@ function Chelm() {
 
     return(
         <section className="full chelm">
-            
+            <BtnTop />
             <div className="container category_item_container">
                 <h1>Chełm Niczym Prypeć </h1>
                 <div className="category_items">

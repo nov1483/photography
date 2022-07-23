@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import Modal from "./modal";
 import db from "../db/db";
+import Spinner from "./spinner";
+import BtnTop from "./toTop";
 
 
 function Places() {
     const [data, setData] = useState([]);
+    const [loaded, setLoaded] = useState(false);
     const [clickedImg, setClickedImg] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);  
    
@@ -64,7 +67,6 @@ function Places() {
                   id : d.id,
                   data : d.data(),
                 });
-                console.log(dataDb)
               });
             if(data.length === 0){
               localStorage.setItem(`${category}`, JSON.stringify(dataDb));
@@ -78,10 +80,20 @@ function Places() {
       
     getData("Places");
     
+    useEffect(() => {
+        setLoaded(true);
+    }, [])
+    if(!loaded) {
+    return (
+        
+        <Spinner/>
+    )
+    }
   
 
     return(
         <section className="full places">
+            <BtnTop />
             <div className="container category_item_container">
                 <h1>Miejsca Na Świecie</h1>
                 <div className="category_items">

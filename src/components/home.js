@@ -7,11 +7,13 @@ import home1 from "../img/homeimg1.jpg";
 import home2 from "../img/homeimg2.jpg";
 import home3 from "../img/homeimg3.jpg";
 import "./home.css"
+import BtnTop from "./toTop";
 
 function Home() {
 
     return(
         <section className="full">
+            <BtnTop />
             <div className="container home_container">
                 <div className="promo_block">
                     <div className="promo_img">
@@ -29,7 +31,7 @@ function Home() {
                                 <div className="work_title">
                                     <h3>Ostatnie Prace</h3>
                                 </div>
-                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę, z której<br/> słychać było charakterystyczne Ryki natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
+                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę, z której<br/> słychać było charakterystyczne Ryki<br/> natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
                             </div>
                             <div className="work_img_container">
                                 <div className="work_img deer">

@@ -4,6 +4,7 @@ import Modal from "./modal";
 import db from "../db/db";
 import Spinner from "./spinner";
 import "./spinner.css"
+import BtnTop from "./toTop";
 
 
 
@@ -68,7 +69,6 @@ function Portret() {
                   id : d.id,
                   data : d.data(),
                 });
-                console.log(dataDb)
               });
             if(data.length === 0){
               localStorage.setItem(`${category}`, JSON.stringify(dataDb));
@@ -82,7 +82,7 @@ function Portret() {
       
     getData("Portret");
     
-  useEffect(() => {
+    useEffect(() => {
         setLoaded(true);
     }, [])
    if(!loaded) {
@@ -91,10 +91,9 @@ function Portret() {
         <Spinner/>
     )
    }
-
     return(
         <section className="full portret">
-            
+            <BtnTop />
             <div className="container category_item_container">
                 <h1>Portret</h1>
                 <div className="category_items">

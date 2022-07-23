@@ -4,6 +4,7 @@ import Modal from "./modal";
 import db from "../db/db";
 import Spinner from "./spinner";
 import "./spinner.css"
+import BtnTop from "./toTop";
 
 function People() {
     const [loaded, setLoaded] = useState(false);
@@ -78,7 +79,7 @@ function People() {
       
     getData("People");
     
-  useEffect(() => {
+    useEffect(() => {
         setLoaded(true);
     }, [])
    if(!loaded) {
@@ -90,7 +91,7 @@ function People() {
 
     return(
         <section className="full people">
-            
+            <BtnTop />
             <div className="container category_item_container">
                 <h1>Ludzie Świata </h1>
                 <div className="category_items">

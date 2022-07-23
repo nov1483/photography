@@ -1,0 +1,17 @@
+.btn-top {
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    z-index: 2;
+}
+
+.btn-top button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    line-height: 25px;
+    background: transparent;
+    color: #FE5D26;
+    cursor: pointer;
+    font-size: 25px;
+}

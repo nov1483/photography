@@ -4,6 +4,7 @@ import Modal from "./modal";
 import db from "../db/db";
 import Spinner from "./spinner";
 import "./spinner.css"
+import BtnTop from "./toTop";
 
 
 
@@ -91,6 +92,7 @@ function Airplane() {
    }
     return(
         <section className="full airplane">
+            <BtnTop />
             <h1>W Chmurach</h1>
             
             <div className="container category_item_container">

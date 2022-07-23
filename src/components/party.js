@@ -4,6 +4,7 @@ import Modal from "./modal";
 import db from "../db/db";
 import Spinner from "./spinner";
 import "./spinner.css"
+import BtnTop from "./toTop";
 
 function Party() {
     const [loaded, setLoaded] = useState(false);
@@ -90,7 +91,7 @@ function Party() {
 
     return(
         <section className="full party">
-            
+            <BtnTop />
             <div className="container category_item_container">
                 <h1>Uroczystości i Imprezy </h1>
                 <div className="category_items">

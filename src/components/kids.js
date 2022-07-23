@@ -4,6 +4,7 @@ import Modal from "./modal";
 import db from "../db/db";
 import Spinner from "./spinner";
 import "./spinner.css"
+import BtnTop from "./toTop";
 
 
 
@@ -92,7 +93,7 @@ function Kids() {
 
     return(
         <section className="full kids">
-            
+            <BtnTop />
             <div className="container category_item_container">
                 <h1>Sesje Dziecięce </h1>
                 <div className="category_items">

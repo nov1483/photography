@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import aboutImg from "../img/about.jpg"
 import "./about.css"
+import BtnTop from "./toTop";
 
 function About() {
 
     return(
         <section className="full about">
+            <BtnTop />
             <div className="container about_container">
                 <h1>Cześć, nazywam się Arkadiusz Smolira, jestem fotografem!</h1>
                 <div className="about_wrapper">

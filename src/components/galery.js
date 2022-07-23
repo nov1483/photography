@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../db/db";
 import "./galery.css"
+import BtnTop from "./toTop";
 
 function Galery() {
     const [data, setData] = useState([]);
-    // const [photos, setPhotos] = useState([]);
 
     async function getData(){
         if (data.length === 0) {
@@ -33,11 +33,10 @@ function Galery() {
       }
       
     getData();
-    console.log(data)
 
-    
-    return(
+return(
         <section className="full about">
+          <BtnTop />
             <div className="container galery_container">
                 <h1>Kategorie</h1>
                 <div className="category">

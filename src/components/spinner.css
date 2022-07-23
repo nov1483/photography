@@ -1,3 +1,4 @@
+
 .loader {
   animation: spin 1s linear infinite;
   height: 10px;
@@ -7,6 +8,7 @@
   left: 50%;
   margin: -5px;
   flex: 1 1 auto;
+
 }
 
 @keyframes spin {

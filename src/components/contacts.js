@@ -2,10 +2,12 @@ import React from "react";
 import { ImMail4 } from 'react-icons/im';
 import { FaFacebookSquare } from 'react-icons/fa';
 import "./contacts.css"
+import BtnTop from "./toTop";
 
 function Contacts() {
     return(
         <section className="full contacts">
+            <BtnTop />
             <div className="full contacts_bg">
                 <div className="container contacts_container">
                     <h1>Kontakty</h1>
