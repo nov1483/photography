@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import promoImg from "../img/promoImg1.png";
 import work from "../img/work.jpg";
-import work1 from "../img/work1.jpg";
+import work1 from "../img/work1.jpeg";
 import home1 from "../img/homeimg1.jpg";
 import home2 from "../img/homeimg2.jpg";
 import home3 from "../img/homeimg3.jpg";
@@ -31,7 +31,7 @@ function Home() {
                                 <div className="work_title">
                                     <h3>Ostatnie Prace</h3>
                                 </div>
-                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę, z której<br/> słychać było charakterystyczne Ryki<br/> natrafiłem na trzcinowisko.<br/> Na nim spotkałem kilka byków.<br/> Ten był jednym z największych.</p>
+                                <p>Mój drugi w życiu wypad na rykowisko.<br/> Idąc kilka kilometrów w stronę, z której słychać było charakterystyczne Ryki natrafiłem na trzcinowisko. Na nim spotkałem kilka byków. Ten był jednym z największych.</p>
                             </div>
                             <div className="work_img_container">
                                 <div className="work_img deer">
@@ -58,7 +58,7 @@ function Home() {
                                     </div>
                                 </div>
                             <div className="work_content">
-                                <p>Widok z Kasprowego Wierchu tuż przed zachodem słońca.<br/> Na szczęście miałem ze sobą mini statyw i kilka minut przed<br/> odjazdem ostatniej kolejki udało mi się zrobić to zdjęcie.</p>
+                                <p>Widok z Kasprowego Wierchu tuż przed zachodem słońca.<br/> Na szczęście miałem ze sobą mini statyw i kilka minut przed odjazdem ostatniej kolejki udało mi się zrobić to zdjęcie.</p>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ function Home() {
                     <div className="services_container">
                         <div className="services_content">
                             <h2>Usługi</h2>
-                            <p>Jeżeli wynajęcie zawodowego fotografa jest dla Ciebie zbyt kosztowne,<br/> a jednak chciałbyś mieć w albumie piękne zdjęcia,<br/> ta oferta jest dla Ciebie:</p>
+                            <p>Jeżeli wynajęcie zawodowego fotografa jest dla Ciebie zbyt kosztowne, a jednak chciałbyś mieć w albumie piękne zdjęcia, ta oferta jest dla Ciebie:</p>
                             <ul>
                                 <li>Sesje Plenerowe</li>
                                 <li>Fotografia Okolicznościowa (chrzciny, urodziny, komunie, śluby, wieczory panieńskie)</li>

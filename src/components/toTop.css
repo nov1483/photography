@@ -1,6 +1,6 @@
 .btn-top {
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     right: 5px;
     z-index: 2;
 }
@@ -13,5 +13,5 @@
     background: transparent;
     color: #FE5D26;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 35px;
 }

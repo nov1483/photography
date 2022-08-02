@@ -16,15 +16,13 @@ function About() {
                         <img src={aboutImg} alt='about'></img>
                     </div>
                     <div className="about_content">
-                        <p>Fotografią na poważnie interesuje się kilkanaście lat. <br/>Jestem założycielem Chełmskiego Klubu Fotografii Przyrodniczej, 
-                            <br/>członkiem Związku Polskich Fotografów Przyrody.
-                        </p>
-                        <p>Posiadam wykształcenie kierunkowe - technik fotografii i multimediów,<br/> ukończyłem kurs fotografowania podczas celebracji liturgicznych.</p>
-                        <p>Otrzymasz zdjęcia z pełnoklatkowego aparatu nowej generacji, obrobione<br/>  cyfrowo, na ozdobnej płycie, dodatkowo galeria internetowa oraz możliwość wywołania<br/>  odbitek. 
-                            Przepisy regulujące działalność nierejestrowaną pozwalają mi<br/>  na podpisanie umowy z klientem oraz wystawienie rachunku.
-                        </p> 
-                        <p>Z racji, że fotografia nie jest moim źródłem utrzymania, a jedynie pasją i hobby, <br/>cena za usługi jest dostępna dla każdej kieszeni.<br/> Jakość zdjęć nie odbiega zaś
-                            znacząco od profesjonalnych ujęć.
+                        <p>Fotografią na poważnie interesuje się kilkanaście lat. Jestem założycielem Chełmskiego Klubu Fotografii Przyrodniczej, 
+                        członkiem Związku Polskich Fotografów Przyrody.     
+                        Posiadam wykształcenie kierunkowe - technik fotografii i multimediów, ukończyłem kurs fotografowania podczas celebracji liturgicznych.
+                        Otrzymasz zdjęcia z pełnoklatkowego aparatu nowej generacji, obrobione cyfrowo, na ozdobnej płycie, dodatkowo galeria internetowa oraz możliwość wywołania odbitek. 
+                        Przepisy regulujące działalność nierejestrowaną pozwalają mi na podpisanie umowy z klientem oraz wystawienie rachunku.
+                        Z racji, że fotografia nie jest moim źródłem utrzymania, a jedynie pasją i hobby, cena za usługi jest dostępna dla każdej kieszeni. Jakość zdjęć nie odbiega zaś
+                        znacząco od profesjonalnych ujęć.
                         </p>
                         <Link to="/galery" onClick={() => window.scrollTo(0,0)} >Portfolio</Link>
                     </div>

@@ -141,6 +141,7 @@
         padding-bottom: 50px;
     }
 
+
     .work_img_container:last-child {
         display: flex;
         flex-direction: column;
@@ -153,6 +154,10 @@
 
     .work_container {
         flex-direction: column;
+    }
+
+    .work_content:first-child{
+        margin-right: 0;
     }
 
     .work_content:last-child {

@@ -112,6 +112,7 @@
 .work_title{
     display: flex;
     align-items: center;
+    margin-right: 90px;
 }
 
 .work_title h3{
@@ -203,7 +204,8 @@
 
 .services_container {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services_container h2 {
